@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物车</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="shopping_cart.css">
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="shopping_cart.js"></script>
+</head>
+<body>
+<button id="return"><a href="../../example.html">返回Examples页面</a></button>
+    <div id="container">
+    	<table class="shopBox">
+    	<thead class="tHead">
+    		<tr >
+    			<th><input type="checkbox" id="headAll" style="width:14px;height:14px;" /> 全选</th>
+    			<th>商品信息</th>
+    			<th>单价（元）</th>
+    			<th >数量</th>
+    			<th>金额（元）</th>
+    			<th>操作</th>
+    		</tr>
+    	</thead>
+    	<tbody class="tBody">
+    		<tr>
+    			<td><input type="checkbox"  style="width:15px;height:15px;"/></td>
+    			<td class="goods"><a href="#"><img src="a.jpg"><div class="describe"> 商品描述信息商品描述商品描述信息商品描述</div></a></td>
+    			<td class="price">56.50</td>
+    			<td class="count"><div class="num"><a href="javascript:;" class="minus">-</a><input type="text" value="1" /><a href="javascript:;" class="add">+</a></div></td>
+    			<td class="total"></td>
+    			<td class="delate"><a href="#">删除</a></td>
+    		</tr>
+    		<tr>
+    			<td><input type="checkbox" style="width:15px;height:15px;"  /></td>
+    			<td class="goods"><a href="#"><img src="d.jpg"><div class="describe">商品描述信息商品描述商品描述信息商品描述</div></td></a>
+    			<td class="price">16.49</td>
+    			<td class="count"><div class="num"><a href="javascript:;" class="minus">-</a><input type="text" value="1" /><a href="javascript:;" class="add">+</a></div></td>
+    			<td class="total"></td>
+    			<td class="delate"><a href="#">删除</a></td>
+    		</tr>
+    		<tr>
+    			<td><input type="checkbox"  style="width:15px;height:15px;" /></td>
+    			<td class="goods"><a href="#"><img src="x.jpg"><div class="describe">商品描述信息商品描述商品描述信息商品描述</div></a></td>
+    			<td class="price">20.99</td>
+    			<td class="count"><div class="num"><a href="javascript:;" class="minus">-</a><input type="text" value="1" /><a href="javascript:;" class="add">+</a></div></td>
+    			<td class="total"></td>
+    			<td class="delate"><a href="#">删除</a></td>
+    		</tr>
+
+    	</tbody>		
+    	</table>
+    	<div class="tfoot">
+    		<div><input style="width:15px;height:15px;" type="checkbox" id="footAll" /> 全选</div>
+    		<div class="footDel"><a href="#">删除</a></div>
+    		<div class="checked">
+    			<div >已选商品<span class="checkNum">0</span>件</div>
+    			<a href="javascript:;" class="up" style="top:0px;left:5px;display:none;">︽</a><a href="javascript:;" class="down" style="top:5px;left:5px;" >︾</a>
+    		</div>
+    		<div class="totalMoney">合计:￥<span class="checkMoney">0.00</span></div>
+    		<button class="account">结 算</button>
+    	</div>
+    	<div class="goodsLi">
+    			<ul></ul>
+    	</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>tab</title>  
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>  
+  <style type="text/css">
+  	*{margin:0px;padding:0px;}
+    a{text-decoration:none;}
+   li{list-style:none;}
+  	#allbox{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:662px;height:202px;border:1px solid #ccc;}
+  	#box {background-color:#eee;height:70px;width:662px;}
+  	#box ul li{float:left;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:220px;height:70px;line-height:70px;padding:0 25px;text-align:center;}
+  	.content ul li{ box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:330px;padding:5px 10px;text-align:center;height:65px;line-height:65px; float:left;}
+  </style> 
+  <script type="text/javascript">
+//function myoveron(obj){
+	window.onload=function(){
+		//setTimeout(function(){tabqiehuan(obj)},1000);
+		var num=0; 
+		timer(num);       
+	} 
+	function timer(num){
+
+		a=setInterval(function(){
+			 var divname=document.getElementById("box");
+             var lists=divname.getElementsByTagName("li");
+			if (num>=lists.length-1){num=0;}
+            else{num++; } 
+            tabqiehuan(num);
+			            },1000); }
+			            
+function tabqiehuan(num){
+  var divname=document.getElementById("box");
+  var lists=divname.getElementsByTagName("li");
+  var classnames=document.getElementsByClassName("content");
+  for (var i=0;i<lists.length;i++){
+  	lists[i].style.backgroundColor="#eee";
+  	classnames[i].style.display="none";
+  }
+  	lists[num].id=num;
+  	lists[num].style.backgroundColor="#fff";
+	classnames[num].style.display="block";
+ }
+
+function onover(obj){
+	clearInterval(a);
+  var divname=document.getElementById("box");
+  var lists=divname.getElementsByTagName("li");
+  var classnames=document.getElementsByClassName("content");
+  for (var i=0;i<lists.length;i++){
+       lists[i].id=i;
+      lists[i].style.backgroundColor="#eee"; 	
+  }
+  obj.style.backgroundColor="#fff"; 	
+	var idvalue=obj.id
+	for (var j=0;j<classnames.length;j++){
+		classnames[j].style.display="none";
+	}
+	classnames[idvalue].style.display="block";
+}
+function onout(obj){
+	num=obj.id;
+   timer(num);
+}
+   </script>
+  </head>
+ <body >
+ 	<div id="allbox">
+ 	<div id="box">
+ 		<ul>
+ 			<li onmouseover="onover(this)" onmouseout="onout(this)" style="background-color: #fff;">房产</li>
+ 			<li onmouseover="onover(this)" onmouseout="onout(this)" >家居</li>
+ 			<li onmouseover="onover(this)" onmouseout="onout(this)" >二手房</li>
+ 		</ul>
+ 	</div>
+ 	<div class="content" style="display:block;">
+ 		<ul>
+ 			<li><a href="#">275万购昌平邻铁三居 总价20万买一居</a></li>
+ 			<li><a href="#">275万购昌平邻铁三居 总价20万买一居</a></li>
+ 			<li><a href="#">275万购昌平邻铁三居 总价20万买一居</a></li>
+ 			<li><a href="#">275万购昌平邻铁三居 总价20万买一居</a></li>
+ 		</ul>
+ 	</div>
+ 	<div class="content" style="display:none;">
+ 		<ul>
+ 			<li><a href="#">经典清新简欧爱家 90平老房焕发新生</a></li>
+ 			<li><a href="#">新中式的酷色温情 66平撞色活泼家居</a></li>
+ 			<li><a href="#">新中式的酷色温情 66平撞色活泼家居</a></li>
+ 			<li><a href="#">新中式的酷色温情 66平撞色活泼家居</a></li>
+ 		</ul>
+ 	</div>
+ 		<div class="content" style="display:none;">
+ 		<ul>
+ 			<li><a href="#">通州豪华3居260万 二环稀缺2居250w甩</a></li>
+ 			<li><a href="#">西3环通透2居290万 130万2居限量抢购</a></li>
+ 			<li><a href="#">黄城根小学学区仅260万 121平70万抛!</a></li>
+ 			<li><a href="#">黄城根小学学区仅260万 121平70万抛!</a></li>
+ 		</ul>
+ 	</div>
+ 	</div>
+ </body>
+</html>  
+      

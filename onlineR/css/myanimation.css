@@ -1,0 +1,192 @@
+
+/*页面掉落*/
+@keyframes mymove
+{
+	0% {transform:rotate(0deg);top:0px;}
+	40% {transform:rotate(15deg);top:20px;opacity: 1;}
+	100% {transform:rotate(15deg);top:500px;opacity: 0;}
+}
+-webkit-@keyframes mymove
+{
+	0% {transform:rotate(0deg);top:0px;}
+	40% {transform:rotate(15deg);top:20px;opacity: 1;}
+	100% {transform:rotate(15deg);top:500px;opacity: 0;}
+}
+-moz-@keyframes mymove
+{
+	0% {transform:rotate(0deg);top:0px;}
+	40% {transform:rotate(15deg);top:20px;opacity: 1;}
+	100% {transform:rotate(15deg);top:500px;opacity: 0;}
+}
+-o-@keyframes mymove
+{
+	0% {transform:rotate(0deg);top:0px;}
+	40% {transform:rotate(15deg);top:20px;opacity: 1;}
+	100% {transform:rotate(15deg);top:500px;opacity: 0;}
+}
+-ms-@keyframes mymove
+{
+	0% {transform:rotate(0deg);top:0px;}
+	40% {transform:rotate(15deg);top:20px;opacity: 1;}
+	100% {transform:rotate(15deg);top:500px;opacity: 0;}
+}
+
+/*左指*/
+
+@keyframes mypoint
+{
+	0% {left:0px;}
+	100%{left:10px;}
+}
+-o-@keyframes mypoint
+{
+	0% {left:0px;}
+	100%{left:10px;}
+}
+-moz-@keyframes mypoint
+{
+	0% {left:0px;}
+	100%{left:10px;}
+}
+-webkit-@keyframes mypoint
+{
+	0% {left:0px;}
+	100%{left:10px;}
+}
+-ms-@keyframes mypoint
+{
+	0% {left:0px;}
+	100%{left:10px;}
+}
+
+/*下指*/
+@keyframes mypointdown
+{
+	0% {top:0px;}
+	100%{top:30px;}
+}
+-webkit-@keyframes mypointdown
+{
+	0% {top:0px;}
+	100%{top:30px;}
+}
+-o-@keyframes mypointdown
+{
+	0% {top:0px;}
+	100%{top:30px;}
+}
+-moz-@keyframes mypointdown
+{
+	0% {top:0px;}
+	100%{top:30px;}
+}
+-ms-@keyframes mypointdown
+{
+	0% {top:0px;}
+	100%{top:30px;}
+}
+
+/*按钮闪烁*/
+@keyframes mysh
+{
+	0% {opacity:1;}
+	100%{opacity: 0.7;}
+}
+-webkit-@keyframes mysh
+{
+	0% {opacity:1;}
+	100%{opacity: 0.7;}
+}
+-moz-@keyframes mysh
+{
+	0% {opacity:1;}
+	100%{opacity: 0.7;}
+}
+-ms-@keyframes mysh
+{
+	0% {opacity:1;}
+	100%{opacity: 0.7;}
+}
+-o-@keyframes mysh
+{
+	0% {opacity:1;}
+	100%{opacity: 0.7;}
+}
+
+
+/*树叶掉落*/
+@keyframes mysnow{ 
+	0%{ 
+		bottom:100%; 
+		opacity:0; 
+	} 
+	50%{ 
+		opacity:1; 
+		transform: rotate(720deg); 
+	} 
+	100%{ 
+		transform: rotate(720deg); 
+		opacity: 0; 
+		bottom:0; 
+	} 
+} 
+-webkit-@keyframes mysnow{ 
+	0%{ 
+		bottom:100%; 
+		opacity:0; 
+	} 
+	50%{ 
+		opacity:1; 
+		transform: rotate(720deg); 
+	} 
+	100%{ 
+		transform: rotate(720deg); 
+		opacity: 0; 
+		bottom:0; 
+	} 
+
+-o-@keyframes mysnow{ 
+	0%{ 
+		bottom:100%; 
+		opacity:0; 
+	} 
+	50%{ 
+		opacity:1; 
+		transform: rotate(720deg); 
+	} 
+	100%{ 
+		transform: rotate(720deg); 
+		opacity: 0; 
+		bottom:0; 
+	} 
+}
+-moz-@keyframes mysnow{ 
+	0%{ 
+		bottom:100%; 
+		opacity:0; 
+	} 
+	50%{ 
+		opacity:1; 
+		transform: rotate(720deg); 
+	} 
+	100%{ 
+		transform: rotate(720deg); 
+		opacity: 0; 
+		bottom:0; 
+	} 
+}
+-ms-@keyframes mysnow{ 
+	0%{ 
+		bottom:100%; 
+		opacity:0; 
+	} 
+	50%{ 
+		opacity:1; 
+		transform: rotate(720deg); 
+	} 
+	100%{ 
+		transform: rotate(720deg); 
+		opacity: 0; 
+		bottom:0; 
+	} 
+}

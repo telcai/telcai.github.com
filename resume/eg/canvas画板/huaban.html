@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>canvas画板</title>
+	<script type="text/javascript" src="/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/Jmove.js"></script>
+	<script type="text/javascript" src="/jscolor.min.js"></script>
+	<script type="text/javascript" src="huaban.js"></script>
+	<style type="text/css">
+		#return {
+			padding:3px 15px;
+			font-size: 18px;
+			float: right;
+			position: fixed;
+			top:0px;
+			right: 0px;
+		}
+		#return a{
+			text-decoration: none;
+		}
+
+	 	#container{width:900px;margin:20px auto; overflow: hidden;}
+		body{background-color: #333;}
+		li {list-style: none; position: relative; left:-25px; top:-5px;}
+		#c1{background-color: #fff;border: 1px solid #ccc;}
+		.sidebar{position: relative; /*right:-130px;*/ box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;padding:10px; width:150px;height:210px;border:1px solid #ccc;float:right;}
+		.color li{ width:18px;height:18px;border: 1px solid #fff;float: left;}
+		.width li {color:#fff;}
+		.color, .width, .eraser{clear:both; color:#fff;font-size: 15px;position: relative;}
+		.width {top:10px;}
+		.color input {display: inline-block; box-sizing:border-box; -webkit-box-sizing:border-box;-moz-box-sizing:border-box;width:18px; height:18px; border: 2px solid #ccc; background-color: black; position: relative;}
+ 		.width input {width:25px;display: inline-block;}
+	    .width li span {display: inline-block; box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box; width:30px; background-color: #fff; position: relative; top:-2px;}
+	    .widthLi{width:90px; position: absolute; left: 50px;margin-top: 5px;display: none;}
+	    .more {width:18px;height:18px;position: relative;top:5px;left: 10px;}
+	    .eraser{top:15px; width:50px;}
+	    .eraser img{width:20px;height:20px;position: relative;top:5px;}
+	    .fullColor{position: absolute; left:60px;top:-2px;}
+	</style>
+
+</head>
+<body>
+<button id="return"><a href="../../example.html">返回Examples页面</a></button>
+	<div id="container">
+		<canvas id="c1" width="700" height="550"></canvas>
+		<div class="sidebar">
+			<div class="color">颜色 <input type="button" class="jscolor  {valueElement:null,value:'000'}" ><!-- <img class="more" src="more.png" /> -->
+			<button class="fullColor">填充背景</button> 
+			    <ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+			    </ul>
+			</div>
+			<div class="width">粗细 <input value="1"/><img class="more" src="more.png"/>
+			    <ul  class="widthLi">
+					<li value="1">1 <span style="height:1px;"></span></li>
+					<li value="2">2 <span style="height:2px;"></span></li>
+					<li value="3">3 <span style="height:3px;"></span></li>
+					<li value="4">4 <span style="height:4px;"></span></li>
+					<li value="5">5 <span style="height:5px;"></span></li>
+			    </ul>
+			</div>
+			<div class="eraser">橡皮擦 <img src="516.png"></div>
+		</div>
+	</div>
+
+</body>
+</html>
