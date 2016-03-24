@@ -1,0 +1,210 @@
+*{margin: 0px;padding:0px;}
+
+	#return {
+		padding:3px 15px;
+		font-size: 18px;
+		position: fixed;
+		right:0px;
+		top:0px;
+	}
+	#return a{
+		text-decoration: none;
+	}
+
+table{
+	border-collapse: collapse;
+}
+a {
+	text-decoration: none;
+	color: #3F3F3F;
+}
+a:hover {
+	color:red;
+}
+li {
+	list-style: none;
+}
+th,td {
+	padding:0 5px;
+	text-align: center;
+}
+
+#container {
+	width:900px;
+	height:auto;
+	margin:20px auto;
+}
+.goods{
+	width:310px;
+}
+.price {
+	width:130px;
+}
+.total {
+	width:110px;
+}
+.delate{
+	width:91px;
+}
+.shopBox{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	width:900px;
+	border-top: 3px solid #259AEC;
+	height:auto;
+}
+.tHead{
+	width:900px;
+	height:35px;
+	line-height: 35px;
+}
+.tHead th {
+	background: #e2f2ff;
+}
+.tBody tr {
+	width:100%;
+    height:120px;
+}
+.tBody tr:hover{
+	background-color: #E8F9FC;
+}
+.tBody img{
+	margin-left:20px;
+	float: left;
+	border:1px solid #bababa;
+}
+.tBody img{
+	width:75px;
+	height:75px;
+}
+
+.describe{
+	text-align: left;
+	height:18px;
+	line-height: 18px;
+	float: left;
+	width:160px;
+	margin-left:15px;
+	font-size: 12px;
+}
+.num {
+	width:85px;
+	height:25px;
+	margin:0 auto;
+
+}
+.num input{
+ 	width:30px;
+ 	height:20px;
+ 	line-height: 20px;
+ 	text-align: center;
+ 	float: left;
+}
+.minus,.add {
+	display: block;
+	float: left;
+	width:22px;
+	line-height: 22px;
+	height:25px;
+	background-color: #F0F0F0;
+	text-align: center;
+}
+.delate {
+	width: 80px;
+}
+
+.tfoot {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	width:900px;
+	height:45px;
+	line-height: 45px;
+	background-color: #eee;
+	padding:0 10px;
+}
+.footDel {
+	text-align: center;
+	width:50px;
+    margin-left:30px;
+}
+.tfoot div {
+	float: left;
+}
+.checked{
+   width:150px;
+   margin-left: 310px;
+
+}
+.checkNum,.checkMoney{
+	margin:0 3px;
+	color:red;
+	font-weight: bold;
+}
+.up,.down{
+	position: relative;
+}
+.up:hover{
+	color:red;
+}
+.down:hover{
+	color:red;
+}
+
+.totalMoney {
+	width:150px;
+	margin-left: 25px;
+}
+.account{
+	width:90px;
+	height:43px;
+	float: right;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: -10px;
+}
+.account:hover{
+	color: red;
+}
+.goodsLi {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	width:900px;
+	height:115px;
+	position: relative;
+	border:1px solid #ccc;
+	background-color: #fff;
+	padding:10px;
+	display: none;
+}
+.goodsLi img{
+	width:90px;
+	height:90px;
+}
+.goodsLi li{
+	margin-left:20px;
+	float: left;
+	border:1px solid #bababa;
+	width:90px;
+	height:90px;
+}
+/*.goodsLi li:hover{
+	opacity: 0.7;
+}*/
+.hoverDel{
+	width:auto;
+	height: auto;
+	padding:1px 2px;
+	background-color: #000;
+	position: relative;
+	top:-93px;
+	float: right;
+    color:#fff;
+    font-size: 10px;
+    cursor: pointer;
+    display: none;
+}

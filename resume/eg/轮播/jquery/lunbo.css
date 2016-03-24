@@ -1,0 +1,83 @@
+*{
+	margin:0px;padding:0px;
+}
+ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0px;
+}
+#lunbo {
+ 	margin:100px;
+ 	box-sizing:border-box;
+ 	width:380px;
+ 	height:380px;
+ 	position:relative;
+ 	float:left;
+ }
+.lunbo-box {
+	box-sizing:border-box;
+	width:380px;
+	height:300px;
+}
+.lunbo-box img {
+	width:380px;
+	height:300px;
+	float: left;
+	position:absolute;
+	left:0px;
+}
+.mark-left,.mark-right{
+    position: absolute;
+    top:0px;
+	width:190px;
+	height:300px;
+}
+.mark-left{left:0px; }
+.mark-right{ right:0px;}
+#arrow {
+	box-sizing:border-box;
+	width:380px;
+	height:50px;
+	padding: 0px 10px;
+	position: absolute;
+	top:140px;
+    z-index: 99;
+}
+#arrow img{
+	width:50px;
+	height:50px;
+	
+}
+.Left{
+	float: left;
+	opacity: 0.5;
+}
+.Right{
+	float: right;
+    opacity: 0.5;
+}
+#nav{
+	padding: 5px 0px;
+	position:relative;
+	top:0px;
+	height:80px;
+	background-color:#efefef;
+	float:left;
+	overflow: hidden;
+	width:380px;
+	box-sizing:border-box;
+}
+
+#nav img{
+	float: left;
+	width:95px;
+	height:70px;
+	box-sizing: border-box;
+	opacity:0.5;
+	border:1px solid #aaa;
+
+}
+#nav ul{
+	position: relative;
+	left: 0px;
+}

@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #008080;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("./fonts/FontAwesome.otf"), url("./fonts/fontawesome-webfont.svg"), url("./fonts/fontawesome-webfont.eot");
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>个人页面</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="baseCss/diary.css"/>
+	<link rel="stylesheet" type="text/css" href="profile.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="bootstrap.min.js"></script>
+    <script type="text/javascript" src="profile.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+	<div class="header clearfix">
+		<nav>
+    		<ul class="nav nav-pills pull-right">
+		  		<li role="presentation" ><a href="diary.html">Home</a></li>
+  				<li role="presentation"><a href="new-note.html">Note <span class="badge">4</span></a></li>
+  				<li role="presentation" class="active"><a href="profile.html">User</a></li>
+			</ul>
+		</nav>
+		<a href="profile.html"><img class="icon" src="a0.jpg"  alt="头像" title="编辑头像"/></a><!-- src="/img/a0.jpg" -->
+		<h3 class="text-muted">Dairy note</h3>
+	</div>
+	<div class="jumbotron" style="padding:30px 60px;">
+	  	<div class="left">
+			<p>头像编辑</p><input class="form-control"  type="file" id="file_input" />
+		</div>
+		<div class="right">
+			<p>效果预览</p><div class="newImg" > </div>
+			<button class="upImg" >设置头像</button>
+			<button class="oImg" >恢复默认头像</button>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

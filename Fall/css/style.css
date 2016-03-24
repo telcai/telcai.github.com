@@ -1,0 +1,251 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+body {
+  min-width: 800px;
+  background-color: bgcolor;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/FontAwesome.otf"), url("fonts/fontawesome-webfont.svg"), url("fonts/fontawesome-webfont.eot");
+}
+.container {
+  margin-bottom: 70px;
+}
+#content {
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  min-height: 630px;
+  top: 50px;
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px 15px 0px 15px;
+}
+.clear {
+  clear: both;
+}
+.article-img {
+  box-sizing: border-box;
+  background-color: #000;
+  width: 21%;
+  height: auto;
+  margin: 15px 1%;
+  border: 5px solid #ccc;
+  box-shadow: 3px 3px 6px #000;
+  border-radius: 3px;
+  float: left;
+  position: relative;
+}
+.article-img img {
+  width: 100%;
+  height: auto;
+}
+#foot {
+  height: 50px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+}
+.copyright {
+  color: #333;
+  margin: 0px;
+  text-align: center;
+  position: relative;
+}
+.copyright a {
+  font-size: 18px;
+  color: #333;
+}
+.copyright a:hover {
+  color: #222;
+}
+.article-img a {
+  color: #f4f4f4;
+}
+.art-declare {
+  box-sizing: border-box;
+  color: #f4f4f4;
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 8px;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 0.5s;
+  -moz-transition: all 0.5s; /* Firefox 4 */
+  -webkit-transition: all 0.5s; /* Safari 和 Chrome */
+  -o-transition: all 0.5s; /* Opera */
+}
+.article-img:hover .art-declare {
+  bottom: 15px;
+  background-color: rgba(255,255,255,0.7);
+}
+.article-img:hover .art-declare a {
+  color: #222;
+}
+.article-img:hover .post-tag {
+  color: #222;
+}
+.post-tag {
+  float: right;
+}
+.post-tag ul {
+  height: 100%;
+}
+.art-declare h4 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0px;
+  float: left;
+  width: 100px;
+}
+#site-title {
+  text-align: center;
+  color: #333;
+  position: relative;
+  top: 0px;
+}
+.site-name {
+  font-family: 'Comic Sans MS', Georgia, Microsoft YaHei, Verdana, Arial, serif;
+  font-size: 50px;
+  margin: 0px;
+}
+.site-name a {
+  color: #333;
+  font-weight: bold;
+}
+.site-name a:hover {
+  text-shadow: 2px 2px 2px #000, 0px 0px 10px #fff, 0px 0px 20px #fff;
+  color: #222;
+}
+.site-motto {
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+.article {
+  font-family: defaultFont;
+  color: #f4f4f4;
+  margin: 20px 0px;
+  background-color: #333;
+  padding: 20px 50px;
+  font-size: 18px;
+}
+.article a {
+  color: #f4f4f4;
+}
+.article a:hover {
+  text-decoration: underline;
+  color: #f4f4f4;
+}
+.article-head {
+  margin-bottom: 30px;
+}
+.archive-time {
+  float: right;
+  position: relative;
+  top: -60px;
+}
+.tag {
+  display: inline-block;
+}
+.tag a {
+  color: #f4f4f4;
+}
+.tag a:hover {
+  color: #222;
+}
+.share p {
+  float: left;
+}
+.share a {
+  margin-top: 0px;
+}
+.article-share {
+  background-color: #eee;
+  margin-top: 40px;
+  padding: 0px 30px;
+  height: 40px;
+  line-height: 1.5;
+  color: #333;
+}
+.article-category,
+.article-tags {
+  float: left;
+  font-size: 24px;
+}
+.baidu-share {
+  float: right;
+}
+.baidu-share p {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+.archive-title {
+  color: #333;
+  padding-top: 30px;
+  padding-left: 135px;
+  margin: 0px;
+}
+.archive-title .fa {
+  position: relative;
+  left: -15px;
+}
+.archive-cont {
+  padding: 20px 120px;
+}
+.archive-cont li {
+  padding: 0px 20px;
+}
+.archive-lis {
+  box-sizing: border-box;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+.archive-lis:hover {
+  border-bottom: 2px solid #333;
+  color: #222;
+}
+.archive-lis:hover a {
+  color: #222;
+}
+.archive-lis-time {
+  float: right;
+  position: relative;
+}
+.archive-lis h3 {
+  position: relative;
+}
+.archive-lis h3 a {
+  color: #333;
+}
+#social-font {
+  position: absolute;
+  width: 50px;
+  right: 10px;
+  top: 50px;
+  height: 253px;
+  line-height: 35px;
+}
+.social {
+  text-align: center;
+  height: 180px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+.social a {
+  color: #333;
+  font-size: 28px;
+}
+.social a:hover {
+  color: #00f;
+}

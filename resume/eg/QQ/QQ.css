@@ -1,0 +1,146 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+#return {
+    padding:3px 15px;
+    font-size: 18px;
+    position:  fixed;
+    top:0px;
+    right: 0px;
+
+  }
+#return a{
+      text-decoration: none;
+  }
+
+
+#QQ_box {
+	position:absolute;
+	top:200px;
+	left:300px;
+	width:350px;
+	height:200px;
+	background-color:#f7f7f7;
+	border:1px solid #ccc;
+	border-radius:8px;
+	box-shadow:0px 0px 8px #ccc;
+	overflow: hidden;
+}
+#title_box {
+	padding:8px;
+	width:350px;
+	height:35px;
+}
+.QQ_logo{
+	width:100px;
+	height:35px;
+	margin:0 auto;
+}
+.QQ_logo img { 
+	width:29px;
+    height:29px;
+    display:block;
+    float:left;
+    padding:0px 15px;
+
+}
+.QQ_logo h4 {
+	display:block;
+	float:left;
+	color: #555;
+	font-size:20px;
+	padding-top: 8px;
+}
+.close {
+	width:15px;
+	height:15px;
+	float: right;
+	margin-top:-40px;
+	margin-right:15px;
+}
+.close img {
+	width:17px;
+	height:17px;
+}
+#cont_box {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	height:165px;
+	width:350px;
+	padding:20px 5px;
+}
+.name{
+	height:30px;
+	width:270px;
+	margin:0px auto;
+}
+.name p { 
+	padding:3px 15px;
+	font-size:14px;
+	float:left;
+    font-weight:600;
+}
+.name input {
+	width:175px;
+	height:20px;
+	float:left;
+	border:1px solid #bbb;
+	border-radius:8px;
+	font-size:12px;
+	line-height:20px;
+	padding:2px 10px;
+}
+input:focus {
+	outline:none;
+	border:1px solid #555;
+}
+.log_in {
+	height:23px;
+	width:160px;
+	padding:10px;
+	margin:0 auto;
+}
+#btn_login {
+	width:70px;
+	height: 21px;
+	padding:1px 7px;
+	border-radius:10px;
+	background:url('bg26.jpg');
+	background-position-x:-2px;
+	background-position-y:-2px;
+	border:0px;
+	outline:none;
+}
+
+#btn_login a{
+	text-decoration:none;
+	color:#fff;
+}
+#state {
+	width:65px;
+	height:20px;
+	margin-left:10px;
+	border:0px;
+	padding:1px 1px;	
+}
+
+#warning {
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+   width:340px;
+   height:25px;
+   padding:2px 25px;
+   font-size:small;
+   color:red;
+   }
+   
+
+
+
+
+
+

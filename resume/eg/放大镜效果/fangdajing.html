@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>放大镜效果</title>
+		<link type="text/css" rel="stylesheet" href="fangdajing.css"/>
+		<script src="jquery-2.1.4.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#org").mouseenter(function(){
+					$("#block").css("display","block");
+					$("#big").css("display","block");
+				});
+				$("#org").mousemove(function(e){
+					move(e);
+                    });
+				$("#block").mouseleave(function(){
+					$("#big").css("display","none");
+					$("#block").css("display","none");				
+				});	
+				
+
+				
+				function move(event){
+					var X=event.clientX, Y=event.clientY
+					var bW=$("#block").css("width"), bH=$("#block").css("height")
+					var oW=$("#org").css("width"), oH=$("#org").css("height")
+					var bPositionX=X-parseInt(bW)/2
+				    var bPositionY=Y-parseInt(bH)/2	
+				    var bigW=$("#big img").css("width"), bigH=$("#big img").css("height")		
+					var bigX=$("#big").css("left"), bigY=$("#big").css("top")
+					var scaleX=bPositionX/parseInt(oW) 
+					var scaleY=bPositionY/parseInt(oH)
+					var bigMoveX=parseInt(bigW)*scaleX,bigMoveY=parseInt(bigH)*scaleY
+					var bigNewX=parseInt(bigX)-bigMoveX,bigNewY=parseInt(bigY)-bigMoveY
+					if (bPositionX<0){
+						bPositionX=0;
+					}
+					if (bPositionX>100){
+						bPositionX=100;
+					}
+					if (bPositionY<0){
+						bPositionY=0;
+					}
+					if (bPositionY>80){
+						bPositionY=80;
+					}
+					$("#block").css("left",bPositionX+"px");
+					$("#block").css("top",bPositionY+"px");
+					if (bigNewX>0){
+						bigNewX=0;
+					}
+					if (bigNewX<-300){
+						bigNewX=-300;
+					}
+					if (bigNewY>0){
+						bigNewY=0;
+					}
+					if (bigNewY<-240){
+						bigNewY=-240;
+					}
+					$("#big img").css("left",bigNewX+"px");
+					$("#big img").css("top",bigNewY+"px");
+					
+					// console.log(bPositionY)
+					// console.log(bigNewY)
+					// console.log(bigMoveY)
+				}
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+	<button id="return"><a href="../../example.html">返回Examples页面</a></button>
+		<div id="org"><img src="15.jpg" />
+			<div id="block" style="display: none;"></div>
+		</div>
+		
+		<div id="big" style="display: none;"><img src="15big.jpg"/></div>
+	</body>
+</html>
