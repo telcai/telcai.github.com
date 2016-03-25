@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<title>演示：jQuery实现的加载页面过渡效果</title>
+<meta name="keywords" content="jQuery,加载页面">
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<style>
+#imgs{width:800px;margin:40px auto}
+#imgs img{float:left;width:400px; height:400px}
+</style>
+<script type="text/javascript" src="http://libs.useso.com/js/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.oLoader.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    $.oPageLoader({
+          fadeLevel: 0,
+          ownStyle: true,
+          style: "<div id='pbar' style='opacity:0.9;color:#fff;position:absolute;bottom:0;left:0;width:100%;background:#000;height:100%;'></div>"+
+          "<div id='ptext' style='opacity:0;margin-bottom:-20px;background:#fff;border-radius:50px;padding:6px;text-shadow:0px 0px 3px #fff;font-size:20px;color:#000;position:absolute;'></div>",
+          update: function(data) {
+            $('#pbar').stop().animate({
+              height: (100-data.percentage)+'%'
+            });
+            $('#ptext')
+            .html(data.percentage+'%')
+            .stop().animate({
+              top: data.percentage+'%',
+              left: '100px',
+              opacity:0.9
+            });
+          }
+    });
+
+});
+</script>
+</head>
+
+<body>
+<div id="header">
+   <div id="logo"><h1><a href="http://www.helloweba.com" title="返回helloweba首页">helloweba</a></h1></div>
+</div>
+<div id="imgs">
+<img src="http://ww2.sinaimg.cn/mw1024/735c1bbbjw1emmbzi48zrj20fd1r9108.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o1s84j20hs0hstcb.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o2ailj20hs0hs446.jpg">
+<img src="http://ww4.sinaimg.cn/bmiddle/af0d43ddjw1egyz0prv5uj20hs0hsdlt.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/735c1bbbjw1emmbzi48zrj20fd1r9108.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o1s84j20hs0hstcb.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o2ailj20hs0hs446.jpg">
+<img src="http://ww4.sinaimg.cn/bmiddle/af0d43ddjw1egyz0prv5uj20hs0hsdlt.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/735c1bbbjw1emmbzi48zrj20fd1r9108.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o1s84j20hs0hstcb.jpg">
+<img src="http://ww2.sinaimg.cn/mw1024/af0d43ddjw1egyz0o2ailj20hs0hs446.jpg">
+<img src="http://ww4.sinaimg.cn/bmiddle/af0d43ddjw1egyz0prv5uj20hs0hsdlt.jpg">
+<div style="clear:both"></div>
+</div>
+
+
+
+<div id="footer">
+    <p>Powered by helloweba.com  允许转载、修改和使用本站的DEMO，但请注明出处：<a href="http://www.helloweba.com">www.helloweba.com</a></p>
+</div>
+</body>
+</html>

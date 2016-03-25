@@ -3,16 +3,40 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+<!-- 		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 		<link type="text/css" rel="stylesheet" href="/Fall/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="/Fall/css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="/Fall/css/font-awesome.min.css">
 		<script type="text/javascript" src="/Fall/js/jquery-2.1.4.min.js"></script>
-		<script type="text/javascript" src="/Fall/js/link.js"></script>
-		<script type="text/javascript" src="/Fall/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/Fall/js/jquery.oLoader.min.js"></script>
 		<script type="text/javascript" src="/Fall/js/fall.js"></script>
 		
 			<title>Hexo</title> 
 		
+		<script type="text/javascript">
+			$(function(){
+
+    $.oPageLoader({
+          fadeLevel: 0,
+          ownStyle: true,
+          style: "<div id='pbar' style='opacity:0.9;color:#fff;position:absolute;bottom:0;left:0;width:100%;background:#000;height:100%;'></div>"+
+          "<div id='ptext' style='opacity:0;margin-bottom:-20px;background:#fff;border-radius:50px;padding:6px;text-shadow:0px 0px 3px #fff;font-size:20px;color:#000;position:absolute;'></div>",
+          update: function(data) {
+            $('#pbar').stop().animate({
+              height: (100-data.percentage)+'%'
+            });
+            $('#ptext')
+            .html(data.percentage+'%')
+            .stop().animate({
+              top: data.percentage+'%',
+              left: '100px',
+              opacity:0.9
+            });
+          }
+    });
+
+});
+		</script>
 	</head>
 
 
@@ -66,9 +90,7 @@
   				
 					<li><a href="/Fall/tags/all/"><i class="fa fa-tag"></i>&nbsp;all<small> (1)</small></li></a>
   				
-					<li><a href="/Fall/tags/hello/"><i class="fa fa-tag"></i>&nbsp;hello<small> (1)</small></li></a>
-  				
-					<li><a href="/Fall/tags/hello/"><i class="fa fa-tag"></i>&nbsp;hello&quot;<small> (1)</small></li></a>
+					<li><a href="/Fall/tags/hello/"><i class="fa fa-tag"></i>&nbsp;hello<small> (2)</small></li></a>
   				
 					<li><a href="/Fall/tags/world/"><i class="fa fa-tag"></i>&nbsp;world<small> (1)</small></li></a>
   				
@@ -84,16 +106,15 @@
 		<div id="content" ><article class="post">
 	<div class="article">
 	
-		<h1 class="article-head">Hello World</h1>
-		<time class="archive-time" datetime="2016-03-24T07:56:32.156Z"><h4>2016-03-24</h4></time>
+		<h1 class="article-head">World</h1>
+		<time class="archive-time" datetime="2016-03-25T01:16:18.539Z"><h4>2016-03-25</h4></time>
 		
 		<div class="article-cont">
 			
 
 			<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. </p>
 <a id="more"></a>
-<p>###Hexo 介绍  </p>
-<p>Hexo 是一款基于node 的静态博客网站生成器  </p>
+<h3 id="Hexo_介绍">Hexo 介绍</h3><p>Hexo 是一款基于node 的静态博客网站生成器  </p>
 <p>作者 ： @tommy351 是一个台湾的在校大学生。  </p>
 <p>相比其他的静态网页生成器而言有着，生成静态网页最快，插件丰富（已经移植了Octopress 插件）。  </p>
 <p>关于如何建立一个Hello World级别的Hexo   官方github主页已经很清晰的说明了，不做重复，直接跳过。  </p>
@@ -108,7 +129,7 @@
 	
   		<ul ><i class="fa fa-archive"></i>
   			
-				<li class="tag"><a href="/Fall/categories/Hexo/" title="分类" >Hexo </a>&nbsp;&nbsp;</li>
+				<li class="tag"><a href="/Fall/categories/world/" title="分类" >world </a>&nbsp;&nbsp;</li>
   			
   			
   		</ul>&nbsp;
@@ -129,11 +150,12 @@
 	<div class="comment"></div>
 </article> </div>
 	</div>
-	<footer id="foot"><p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/telcai/Falling" target="_blank" title="Concise">Concise</a> © 2016 
+	<footer id="foot"><p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme  <a href="https://github.com/telcai/Falling" target="_blank" title="Fall">Fall</a> © 2016by 
 	
 		<a href="http://yoursite.com/about" target="_blank" title="telCai">telCai</a>
 		
 </p>
 </footer>
 </body>
-		
+<script type="text/javascript" src="/Fall/js/link.js"></script>
+<script type="text/javascript" src="/Fall/js/bootstrap.min.js"></script>		

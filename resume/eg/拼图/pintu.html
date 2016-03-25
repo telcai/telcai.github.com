@@ -4,7 +4,30 @@
     <meta charset="utf-8"/>
 	<title>拼图游戏</title>
 	<link rel="stylesheet" type="text/css" href="pintu.css"/>
+   <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+   <script type="text/javascript">
+    $(function(){
+    $.oPageLoader({
+          fadeLevel: 0,
+          ownStyle: true,
+          style: "<div id='pbar' style='opacity:0.9;color:#fff;position:absolute;bottom:0;left:0;width:100%;background:#ccc;height:100%;'></div>"+
+          "<div id='ptext' style='opacity:0;margin-bottom:-20px;background:#fff;border-radius:50px;padding:6px;text-shadow:0px 0px 3px #fff;font-size:20px;color:#000;position:absolute;'></div>",
+          update: function(data) {
+            $('#pbar').stop().animate({
+              height: (100-data.percentage)+'%'
+            });
+            $('#ptext')
+            .html(data.percentage+'%')
+            .stop().animate({
+              top: data.percentage+'%',
+              left: '100px',
+              opacity:0.9
+            });
+          }
+    });
 
+});
+   </script>
 </head>
 <body>
 <button id="return"><a href="../../example.html">返回Examples页面</a></button>
