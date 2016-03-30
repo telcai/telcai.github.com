@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>任务15</title>
+	<script type="text/javascript">
+	window.onload=function(){
+		var source=document.getElementById('source') ,
+			li=source.getElementsByTagName("li"),
+			b=source.getElementsByTagName("b"),
+			result=document.getElementById("result"),
+			city=[],
+			values=[],
+			city_Arr=[]
+		// 获取城市，数据
+		for (var i=0;i<li.length;i++){
+			var liarr=li[i].innerHTML.split("",2);
+			city.push(liarr[0]+liarr[1]);
+			values.push(b[i].innerHTML);
+		}
+		// 整理数据
+		for (var i=0;i<city.length;i++){
+			city_Arr.push(new CityVal(city[i],values[i]));
+		}
+
+		//排序
+		document.getElementById("btn1").onclick=function(){
+			city_Arr.sort(cityAtoB);
+			showResult(city_Arr);
+			// console.log(city_Arr)
+		};
+		document.getElementById("btn2").onclick=function(){
+			city_Arr.sort(goodtoBad);
+			showResult(city_Arr);
+		};
+		document.getElementById("btn3").onclick=function(){
+			city_Arr.sort(BadtoGood);
+			showResult(city_Arr);
+		};
+
+		function cityAtoB(a,b){
+			return a.city.localeCompare(b.city);
+		}
+		function goodtoBad(a,b){
+			return a.values - b.values;
+		}
+		function BadtoGood(a,b){
+			return b.values - a.values;
+		}
+
+		function CityVal(city,values){
+			this.city=city;
+			this.values=values;
+		}
+		// 显示信息
+		function showResult(arr){
+			result.innerHTML="";
+			var ul=document.createElement("ul");
+			result.appendChild(ul);
+			for (var i=0;i<arr.length;i++){
+				lis=document.createElement("li");
+				lis.innerHTML="第"+(i+1)+"名："+arr[i].city+"空气质量：<b>"+arr[i].values+"</b>";
+				ul.appendChild(lis);
+			}
+		} 
+
+	}
+
+	</script>
+</head>
+<body>
+<ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+	<button id="btn1">按照城市排序</button>
+	<button id="btn2">按照空气质量由好到差排序</button>
+	<button id="btn3">按照空气质量由差到好排序</button>
+	<p>排序结果：<div id="result"></div></p>
+</body>
+</html>

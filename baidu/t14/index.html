@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>任务14</title>
+</head>
+<script type="text/javascript">
+window.onload=function(){
+ var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 100],
+  ["西安", 90]
+  ];
+ var arr=[];
+ var sortArr=[]; 
+ var ul=document.createElement("ul");
+ var result=document.getElementById("result");
+ result.appendChild(ul);
+ // 找到符合要求的数据
+for (var i in aqiData){
+	if (aqiData[i][1]>=60){
+		arr.push(aqiData[i])
+	}
+}
+// 对符合要求的数据排序
+for (var i in arr){
+	sortArr.push(new Sort(arr[i][0],arr[i][1]));
+}
+sortArr.sort(sortNum); //sortArr为排序后的二维数组
+
+// 显示数据
+for (var i in sortArr){
+	var li=document.createElement("li");
+	li.innerHTML="第"+i+"名："+sortArr[i].name+"-"+sortArr[i].value;
+	ul.appendChild(li);
+}
+
+
+function Sort(name,value){
+	this.name=name;
+	this.value=value;
+}
+function sortNum(a,b){
+	return b.value-a.value
+}
+  // console.log(sortArr)
+  
+}
+</script>
+<body>
+   筛选结果：
+   <div id="result"></div>
+</body>
+</html>
