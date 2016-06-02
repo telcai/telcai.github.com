@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>列车时刻查询</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="../jquery.mobile-1.4.5.min.css" />
+	<style type="text/css">
+</style>
+</head>
+<body>
+
+
+<div data-role="page" id="index">
+	<div data-role="header" data-position="fixed"><h1>列车时刻表查询</h1></div>
+
+	<div role="main" class="ui-content">
+			<div class="ui-field-contain">
+				<label for="start">出发站:</label>
+				<input type="text" name="start" id="start" />
+			</div>
+			<div class="ui-field-contain">
+				<label for="stop">终点站:</label>
+				<input type="text" name="stop" id="stop" />
+			</div>
+			<div class="ui-field-contain">
+				<label for="num">车次查询:</label>
+				<input type="text" name="num" id="num" />
+			</div>
+			<button id="submit">查 询</button>
+		<div class="ui-field-contain">
+			<ul data-role=listview data-inset="true" id="trainLi">
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#index" data-icon="search" class="ui-btn-active">查询</a></li>
+				<li><a href="#" data-icon="heart">收藏</a></li>
+				<li><a href="#" data-icon="gear">设置</a></li>
+			</ul>
+		</div>
+	</div>
+	
+
+</div>
+
+
+
+<div data-role="page" id="index2">
+	<div data-role="header" data-position="fixed"><h1>列车详细信息</h1></div>
+	<div role="main" class="ui-content" data-inset="true">
+		<h2></h2>
+		<table data-role="table" data-mode="reflow" class="ui-responsive table-stroke" id="details">
+			<thead>
+				<tr>
+					<th>站名</th>
+					<th>到站时间</th>
+					<th>出发时间</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<a id="back" href="#index" diaplay="none" data-role="button" class="ui-btn" data-transition="slide" data-direction="reverse">返 回</a>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#index" data-icon="search" class="ui-btn-active">查询</a></li>
+				<li><a href="#" data-icon="heart">收藏</a></li>
+				<li><a href="#" data-icon="gear">设置</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script src="../jquery-2.1.4.min.js"></script>
+<script src="../jquery.mobile-1.4.5.min.js"></script>
+<script src="webapp.js"></script>
+</body>
+</html>

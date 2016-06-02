@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>mobile test</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link type="text/css" rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+	<style type="text/css">
+		*{
+			font-family: 'Microsoft YaHei';
+		}
+		#list a{
+			font-family: 'Microsoft YaHei';
+		}
+		#list a:hover{
+			background-color: #333;
+			color: #fff;
+		}
+		#con{
+			width:50px;
+			font-family: 'Microsoft YaHei';
+		}
+	</style>
+	<script type="text/javascript">
+  
+	</script>
+</head>
+<body>
+	<div data-role="page" id="index" data-theme="a" >
+		<div data-role="header"   data-position="fixed">
+			<h1>jQuery Mobile</h1>
+			<a href="#" data-rel="back" class="ui-btn-left">返 回</a>
+		</div>
+		<div data-role="main" class="ui-content" >
+			<p>This is a <a href="#">link</a></p>
+			<div id="list" data-role="fieldcontain">
+				<ul data-role="listview" data-inset="true" >
+					<li data-role="list-divider">Divider</li>
+					<li><a href="#">Item 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a hrefsec="#">Item 3</a></li>
+				</ul>			
+			</div>
+			
+			<br />
+			<div  data-role="fieldcontain">
+				<p>Flip Switch</p>
+				<select data-role="slider">
+					<option value="1">ON</option>
+					<option value="0">OFF</option>
+				</select>
+			</div>
+			<br />
+			<div data-role="fieldcontain">
+				<legend for="r">Slider</legend>
+				<input type="range" name="range" id="r" min="0" max="100" value="50" data-highlight="true" />
+			</div>
+			<br />
+
+			<div data-role="fieldcontain">
+				<a href="#pop" data-rel="popup" data-position-to="window" data-transition="fade" title="点我查看大图"><img src="img/k.jpg"  style="width:100px;" /></a>
+				<p>点击原图可以查看大图哦！</p>
+				<div data-role="popup" id="pop">
+					<a href="#" data-rel="back" class="ui-btn ui-icon-delete ui-corner-all ui-btn-icon-notext ui-btn-right">close</a>
+					<img src="img/k.jpg"  style="height:512px;" />
+				</div>
+				
+			</div>
+			<br />
+		
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>Choose a pet:</legend>
+					<label>
+						<legend for="r1">Cat</legend>
+						<input type="radio" name="pet" id="r1" />
+					</label>
+					<label>
+						<legend for="r2">Dog</legend>
+						<input type="radio" name="pet" id="r2" />
+					</label>
+					<label>
+						<legend for="r3">Hamster</legend>
+						<input type="radio" name="pet" id="r3" />
+					</label>
+					<label>
+						<legend for="r4">Lizard</legend>
+						<input type="radio" name="pet" id="r4" />
+					</label>
+				</fieldset>
+			</div>
+			<br />
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>Choose as many snacks as you'd like:</legend>
+					<label>
+						<legend for="c1">Cheetos</legend>
+						<input type="checkbox" name="cheetos" id="c1" />
+					</label>
+					<label>
+						<legend for="c2">Doritos</legend>
+						<input type="checkbox" name="doritos" id="c2" />
+					</label>
+					<label>
+						<legend for="c3">Fritos</legend>
+						<input type="checkbox" name="fritos" id="c3" />
+					</label>
+					<label>
+						<legend for="c4">Sun Chips</legend>
+						<input type="checkbox" name="sunchips" id="c4" />
+					</label>
+				</fieldset>
+			</div>
+
+			<br />
+			<h1>H1 Heading</h1>
+			<p>This is a paragraph that contains <strong>strong</strong>, <em>emphasized</em> and <a href="#">linked</a> text. Here is more text so you can see how HTML markup works in content. Here is more text so you can see how HTML markup works in content.</p>
+			<br />
+			<div data-role="collapsible">
+				<h2>点击我-可以折叠</h2>
+				<p>我是一个可以折叠的内容块1！</p>
+			</div>
+			<div data-role="collapsible" data-content-theme="false">
+				<h2>点击我-可以折叠</h2>
+				<p>我是一个可以折叠的内容块2！</p>
+			</div>
+			<br />
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Font styling:</legend>
+					<label>
+						<legend for="b">b</legend>
+						<input type="checkbox" name="b" id="b" />
+					</label>
+					<label>
+						<legend for="i">i</legend>
+						<input type="checkbox" name="i" id="i" />
+					</label>
+					<label>
+						<legend for="u">u</legend>
+						<input type="checkbox" name="u" id="u" />
+					</label>
+				</fieldset>
+			</div>
+			<br />
+			<div id="input">
+				<legend for="text">Text Input:</legend>
+				<input type="text" id="text" data-clear-btn="true" placeholder="text..." />
+			</div>
+			<br />
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" >
+					<legend>时间安排</legend>
+						<select id="date">
+							<option>Sunday</option>
+							<option>Monday</option>
+							<option>Tuesday</option>
+							<option>Wednesday</option>
+							<option>Thursday</option>
+							<option>Friday</option>
+							<option>Saturday</option>
+						</select>
+						<select id="time">
+							<option>08:00</option>
+							<option>09:00</option>
+							<option>10:00</option>
+							<option>11:00</option>
+							<option>14:00</option>
+							<option>15:00</option>
+							<option>16:00</option>
+						</select>
+				</fieldset>
+			</div>
+			<br />
+
+			<a data-role="button" href="#index2" data-rel="dialog">确定</a>
+		</div> <!-- main -->
+		<div data-role="footer" data-position="fixed" >
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home" data-type="active">首页</a></li>
+					<li><a href="#" data-icon="search">搜索</a></li>
+					<li><a href="#" data-icon="gear">设置</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="index2">
+		<div data-role="header">
+			<h1></h1>
+		</div>
+		
+		<div data-role="main" class="ui-content" style="text-align:center;">
+				<p>确定保存修改吗？</p>
+			
+		</div>	
+		<div data-role="footer"  style="text-align:center;"> 
+			<a id="con" href="#" data-role="button" data-rel="back" data-inline="true">Yes</a>
+			<a id="con" href="#" data-role="button" data-rel="back" data-inline="true" data-theme="b">No</a>
+		</div>
+	</div>
+
+</body>
+</html>
+
