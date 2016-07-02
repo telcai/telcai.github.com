@@ -1,0 +1,117 @@
+html, body {
+	margin:0px;
+	padding:0px;
+}
+.win_boundingBox{
+	position: fixed;	
+	left:0px;
+	right:0px;
+	margin:0px auto;
+	/*top:150px;*/
+	z-index: 100;
+	border:0px;
+	border-radius:8px;
+	box-shadow: 5px 5px 8px #222;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	/*padding:20px;*/
+}
+.win_btn{
+	position: absolute;
+	width:50px;
+	height:30px;
+	bottom:15px;
+	left:0px;
+	right:0px;
+	margin: auto;
+	border:1px solid #ccc;
+	/*box-shadow: 1px 1px 5px #000;*/
+	border-radius: 5px;
+	padding:3px 7px;
+}
+.win_btn:hover{
+	box-shadow: 0px 0px 8px #333;
+
+}
+.win_btn_color{
+	background-color: #fff;
+}
+.win_title{
+	width:100%;
+	height:45px;
+	border-radius:5px 5px 0px 0px; 
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	text-align: center;
+	line-height:45px; 
+}
+.win_title_color{
+	color:#fff;
+	background-color: #222;
+
+}
+
+.win_content{
+	padding: 12px;
+	width:100%;
+	border-radius: 0px 0px 5px 5px;
+	background-color: #fff;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+}
+
+.win_closeBtn{
+	display: block;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top:-7px;
+	right: -7px;
+	background: url('img/close.png') center no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+.win_theme_red .win_title_color{
+	background-color: red;
+}
+
+.win_theme_red .win_btn_color{
+	background-color: red;
+	color:#fff;
+}
+
+
+.win_theme_blue .win_title_color{
+	background-color: blue;
+}
+
+.win_theme_blue .win_btn_color{
+	background-color: blue;
+	color:#fff;
+}
+
+.win_cover{
+	width:100%;	
+	height:100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 99;
+	background-color: rgba(127,127,127,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
