@@ -1,0 +1,90 @@
+.list 
+	width 100%
+.list
+	table
+		width 100%
+		height auto
+		border 0px
+		padding 10px
+		border-collapse: collapse;
+		table-layout fixed
+
+	thead
+		height tr-height
+		line-height tr-height
+		background-color body-color
+	tbody
+		tr 
+			background-color tr-color 
+			border-bottom 1px solid #ccc
+			&:hover
+				background-color tr-hoverColor
+	tfoot
+		tr
+			background-color tr-color
+			button
+				border-radius 3px
+				padding 7px 22px 
+				margin-left 35px
+				font-size 16px
+				border 1px solid border-color
+	tr
+		height tr-height
+		line-height tr-height
+
+		td:nth-child(1)
+			width td-width*0.5
+		td:nth-child(2)
+			width td-width*2.8
+			overflow hidden
+			white-space nowrap
+			text-overflow ellipsis
+		td:nth-child(3)
+			width td-width*2.3
+		td:nth-child(4)
+			width td-width*1
+		td:nth-child(5)
+			width td-width*1.4
+		td:nth-child(6)
+			width td-width*1.3
+		button
+			border-radius 3px
+			padding 5px 17px 
+			margin 0px 5px
+			border 1px solid border-color
+
+	td 
+		padding 0px 15px
+		box-sizing border-box
+		-webkit-box-sizing border-box
+		-moz-box-sizing border-box
+
+#newBtn
+	span
+		display block
+		width 100%			
+		height 35px
+		line-height 35px
+		color #fff
+		border-radius 2px
+		text-align center
+		background-color header-bg
+		font-size 17px
+		cursor pointer
+
+.disable
+	color #ababab
+	background-color tr-color
+
+.notissue 
+	color #000
+
+.issuing
+	color issuing-color
+
+.endissue
+	color endissue-color
+
+.checked
+	background-color header-bg	
+	color #000

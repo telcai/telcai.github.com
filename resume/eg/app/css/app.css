@@ -1,0 +1,67 @@
+#return {
+		padding:3px 15px;
+		font-size: 18px;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+	}
+#return a{
+			text-decoration: none;
+	}
+
+.ui-bar-f{
+	background-color: #1ABC9C;
+	color:#fff;
+	font-size: 18px;
+	height:54px;
+	font-family: "宋体";
+}
+
+.btn_color{
+	background-color:#1ABC9C;
+}
+.container{
+	width:95%;
+	margin:0px auto;
+}
+.infor{
+	display: none;
+}
+
+div[data-role='collapsible'] a{
+	line-height: 1.3;
+
+}
+.text{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding:5px 25px;
+	line-height: 1.8;
+	text-indent: 2em;
+	text-align: justify;
+}
+#edit_icon{
+	display: none;
+	border-radius:15px;
+}
+#back{
+	display:none;
+	border-radius:15px;
+}
+
+a[data-rel='popup'] img{
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	border-radius: 5px;
+	border:1px solid #ccc;
+	padding:5px;
+	margin:0px 10px;
+}
+.edit{
+	display: none;
+}
+#submit {
+	border-radius: 15px;
+}

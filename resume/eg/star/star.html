@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<title>星级评分系统</title>
+	<link rel="stylesheet" type="text/css" href="star.css" />
+	<script type="text/javascript" src="jquery-2.1.4.min.js" ></script>
+    <script type="text/javascript" src="health.js"></script>
+	 <script type="text/javascript">
+        $(document).ready(function(){
+             var liStar=$(".star li"),
+                 liDes=$(".des li"),
+                 o=true;   
+             liStar.each(function(){
+                $(this).mouseover(function(){	
+                		var Index=$(this).index()
+                         showStar(Index);	
+                	
+                 })
+                 $(".star").mouseleave(function(){
+                	if (o){
+                		liStar.find("img").css("top","0px");
+                	}else{
+                		showStar(Index1)
+                	  }
+                	
+                })
+
+                $(this).click(function(){
+                    o=false;
+                    Index1=$(this).index()
+                	liDes.css("display","none");
+                	liDes.eq(Index1).css("display","block");
+                })
+
+
+             });
+        function showStar(indx){
+        	liStar.find("img").css("top","0px");
+                	for (var i=0;i<=indx;i++){
+                		 var img=liStar.eq(i).find("img");
+                	    img.css("top","-30px");
+                	  }
+              }
+
+        })
+
+	</script>
+</head>
+<body>
+    <button id="return"><a href="../../example.html">返回Examples页面</a></button>
+    
+    <div id="container">
+    	<p class="txt">点击星星可以打分</p>
+    	<div class="star">
+    		<ul>
+    			<li><img src="star.png" title="1分 很不满意"/></li>
+    			<li><img src="star.png" title="2分 不满意" /></li>
+    			<li><img src="star.png" title="3分 一般"/></li>
+    			<li><img src="star.png" title="4分 满意"/></li>
+    			<li><img src="star.png" title="5分 非常满意"/></li>
+    		</ul>
+    	</div>
+    	<div class="des">
+    		<ul>
+    			<li><span>1分</span>(差得太离谱，与卖家描述的严重不符，非常不满)</li>
+    			<li><span>2分</span>(部分有破损，与卖家描述的不符，不满意)</li>
+    			<li><span>3分</span>(质量一般，没有卖家描述的那么好)</li>
+    			<li><span>4分</span>(质量不错，与卖家描述的基本一致，还是挺满意的)</li>
+    			<li><span>5分</span>(质量非常好，与卖家描述的完全一致，非常满意)</li>
+    		</ul>
+    	</div>
+</div>
+</body>
+</html>
