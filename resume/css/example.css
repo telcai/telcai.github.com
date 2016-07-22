@@ -13,7 +13,7 @@ i {
 	width:100%;
 	margin: 0px auto;
 	padding:40px 50px;
-	height:400px;
+	height:auto;
 	background-color: #eee;
 	border-radius: 10px;
 	font-size: 20px;
@@ -23,6 +23,20 @@ i {
 	height:45px;
 	float: left;
 }
+.star{
+	height: 30px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	font-size: 16px;
+	clear: both;
+}
+.star img{
+	position: relative;
+	top:-18px;
+	margin-left: 5px;
+}
+
+
 /*
 #eg-cont-left{
 	width:18%;
