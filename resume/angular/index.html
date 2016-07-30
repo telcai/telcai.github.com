@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='todo-list'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel="stylesheet" type="text/css" href="a.css">
+		<script src='angular.min.js'></script>
+		<script src='todo.js'></script>
+
+	</head>
+	<body ng-controller='TodoList'>
+		<div id='box'>
+			<header><h3>List</h3></header>
+			<div class="cont" >
+				<ul>
+					<li ng-class="{'did':item.status}" ng-repeat='item in listItem track by $index'>  <!-- {true:'did',flase:''}[item.status] -->
+						<input type='checkbox' ng-model='item.status' ng-change='getdidLen()' />
+						{{item.name}}
+						<button ng-click='delItem()' class='delBtn'>删除</button>
+					</li>
+				</ul>	
+			</div>
+			<footer>
+				<p class="add">Add task <input type="text" placeholder="你还想做什么.."  set-Focus  ng-model='newTask'/></p>
+				<button class="save" ng-click='addItem()' >Submit</button>
+				<p class='total'>已完成:<span ng-init='didLen=0' >{{didLen}}</span>／总共:<span>{{listItem.length}}</span></p>
+			</footer>
+		</div>
+	</body>
+
+</html>
