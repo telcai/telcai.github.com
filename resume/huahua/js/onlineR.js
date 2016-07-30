@@ -44,14 +44,6 @@ function fall(demo,allFall){
 		demo.addClass("pagefall");
 		var Index=demo.index()-1;
 		
-		// var set = setTimeout(function(){
-  //           demo.removeClass("a");
-  //           demo.addClass("b") ; 
-  //       },3500);
-
-  //       $("#list li").eq(Index).animate({
-		// 	opacity:"0"
-		// },2000);
 		$("#list li").eq(Index).animate({
 			opacity:"1"
 		},1000);
