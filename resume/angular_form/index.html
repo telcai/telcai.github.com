@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head >
+	<meta charset='utf-8' />
+	<link rel="stylesheet" type="text/css" href="form.css" />
+
+</head> 
+<body ng-controller='Form'>
+	<button id='return'> <a href='../example.html'>返回example列表</a></button>
+	<div id='form' >
+		<header><h2>注 册</h2></header>
+		<form name='subForm' >
+
+			<label >
+				<span>用户名</span>
+				<input type='text' name='username' ng-class="{'error':(subForm.username.$invalid)&&(subForm.username.$touched)}" ng-model='user.username' placeholder='用户名长度为4-15位'  ng-minlength='4' ng-maxlength='15' required />
+				<p class='error' ng-if='(subForm.username.$error.required)&&(subForm.username.$touched)' >用户名不可为空</p>
+				<p class='error' ng-if='(subForm.username.$error.minlength)||(subForm.username.$error.maxlength)' >用户名长度为4-15位</p>
+			</label>
+			<br>
+			<label>
+				<span>设置密码</span>
+				<input type='password' placeholder='密码长度为6-30位' name='password' ng-class="{'error':(subForm.password.$invalid)&&(subForm.password.$touched)}" ng-model='user.password' ng-minlength='6' ng-maxlength='30' required />
+				<p class='error' ng-if='(subForm.password.$error.required)&&(subForm.password.$touched)'>密码不能为空</p>
+				<p class='error' ng-if='(subForm.password.$error.minlength)||(subForm.password.$error.maxlength)'>密码长度为6-30位</p>
+			</label>
+			<br>
+			<label>
+				<span>确认密码</span>
+				<input type='password' compare='user.password' name='password2' ng-class="{'error':(subForm.password2.$invalid)&&(subForm.password2.$touched)}" ng-model='user.password2' ng-minlength='6' ng-maxlength='30' required />
+				<p class='error' ng-if='(subForm.password2.$error.compare)&&(subForm.password2.$touched)'>两次输入不一致</p>
+			</label>
+			<button ng-click='submit()' ng-class="{'disable':(subForm.username.$invalid)||(subForm.password.$invalid)||(subForm.password2.$error.compare)}"  ng-disabled='(subForm.username.$invalid)||(subForm.password.$invalid)||(subForm.password2.$error.compare)' >Submit</button>
+		</form>
+
+	</div>
+	<script  src='angular.min.js'></script>
+	<script src='form.js'></script>
+</body>
+</html>
