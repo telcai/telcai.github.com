@@ -1,0 +1,126 @@
+.showa{
+	animation:showa 0.8s forwards;
+	-webkit-animation:showa 0.8s forwards;
+}
+@keyframes showa{
+	from{
+		opacity: 0;
+		transform:scale(0.5);
+	}
+	to{
+		opacity: 1;
+		transform:scale(1);
+	}
+}
+
+
+.ripple:before{
+	animation:ripple 0.8s ease-in-out forwards ;
+	-webkit-animation:ripple 0.8s ease-in-out forwards 
+}
+
+@keyframes ripple{
+	0%{
+		opacity: 0.5;
+		width:0px;
+	}
+	100%{
+		opacity: 0;
+		width: 100%;
+	}
+}
+
+.showb{
+	animation:showb 1s forwards;
+	-webkit-animation:showb 1s forwards;
+}
+@keyframes showb{
+	0%{
+		opacity: 0;
+		top:800px;
+	}
+	100%{
+		opacity: 1;
+		top: 700px;
+	}
+}
+
+.showc{
+	animation:showc 0.8s forwards ease-in-out;
+	-webkit-animation:showc 0.8s forwards ease-in-out;
+}
+@keyframes showc{
+	0%{
+		left:-200px;
+		opacity: 0;
+	}
+	100%{
+		left: 0px;
+		opacity: 1;
+
+	}
+}
+
+.showd{
+	animation:showd 1.2s forwards ;
+	-webkit-animation:showd 1.2s forwards ;
+}
+@keyframes showd{
+	0%{
+		left:-100px;
+		top:-50px;
+		opacity: 0;
+	}
+	100%{
+		left: 0px;
+		top:0px;
+		opacity: 1;
+
+	}
+}
+
+.showe{
+	animation:showe 1.2s forwards ;
+	-webkit-animation:showe 1.2s forwards ;
+}
+@keyframes showe{
+	0%{
+		left:100px;
+		top:-50px;
+		opacity: 0;
+	}
+	100%{
+		left: 0px;
+		top:0px;
+		opacity: 1;
+
+	}
+}
+.showf{
+	animation:showf 1.2s forwards;
+	-webkit-animation:showf 1.2s forwards;
+}
+@keyframes showf{
+	0%{
+		opacity: 0;
+		top:100px;
+	}
+	100%{
+		opacity: 1;
+		top: 0px;
+	}
+}
+.showg{
+	animation:showg 0.8s forwards;
+	-webkit-animation:showg 0.8s forwards;
+}
+@keyframes showg{
+	0%{
+		opacity: 0;
+		left: 200px;
+	}
+	100%{
+		opacity: 1;
+		left: 0px;
+	}
+}
